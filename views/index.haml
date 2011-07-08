@@ -1,0 +1,24 @@
+!!! XHTML
+%html
+  %head
+    %title= @title
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/main.css", :type => 'text/css'}
+    :javascript
+      var app_root = "#{app_root}";
+      var omikuji_api = app_root+'/omikuji.json';
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/main.js"}
+  %body
+    %div#content
+      %div#head
+        %h1= @title
+        %h2 Ajax Omikuji
+        %input{:id => 'start_btn', :type => 'button', :value => 'start'}
+        %div
+          result
+          %ul#results
+        %hr
+        %div
+          source code : 
+          - src_url = 'https://github.com/shokai/sinatra-template'
+          %a{:href => src_url} #{src_url}
