@@ -11,6 +11,7 @@ begin
 rescue => e
   STDERR.puts 'config.yaml load error!'
   STDERR.puts e
+  exit 1
 end
 
 def app_root
