@@ -3,6 +3,13 @@ Sinatra Template (Omikuji)
 Sinatra+Haml+jQuery App Template.
 
 
+Clone
+-----
+
+    % git clone git://github.com/shokai/sinatra-template.git
+    % cd sinatra-template
+
+
 Install Dependencies
 --------------------
 
