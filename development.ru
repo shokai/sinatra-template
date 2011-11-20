@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require File.dirname(__FILE__)+'/helper'
-require File.dirname(__FILE__)+'/main'
+require File.dirname(__FILE__)+'/bootstrap'
 
 set :environment, :development
 
