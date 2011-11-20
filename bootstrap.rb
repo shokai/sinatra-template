@@ -4,6 +4,7 @@ require 'rack'
 require 'sinatra/reloader' if development?
 require 'yaml'
 require 'json'
+require 'haml'
 [:helpers, :models ,:controllers].each do |dir|
   Dir.glob(File.dirname(__FILE__)+"/#{dir}/*.rb").each do |rb|
     puts "loading #{rb}"
