@@ -12,6 +12,8 @@ require 'haml'
   end
 end
 
+set :haml, :escape_html => true
+
 begin
   @@conf = YAML::load open(File.dirname(__FILE__)+'/config.yaml').read
   p @@conf
