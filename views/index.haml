@@ -7,7 +7,8 @@
     var omikuji_api = app_root+'/omikuji.json';
   %script{:type => 'text/javascript', :src => "#{app_root}/js/main.js"}
 
-%input{:id => 'start_btn', :type => 'button', :value => 'start'}
 %div
-  result
+  %input{:id => 'start_btn', :type => 'button', :value => 'start'}
+%div
+  %h2 result
   %ul#results

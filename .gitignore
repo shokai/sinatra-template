@@ -1,3 +1,4 @@
 *.lock
 *.tmp
 ~*
+.sass-cache

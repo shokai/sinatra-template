@@ -6,6 +6,7 @@ require 'sinatra/content_for'
 require 'yaml'
 require 'json'
 require 'haml'
+require 'sass'
 
 begin
   @@conf = YAML::load open(File.dirname(__FILE__)+'/config.yaml').read
