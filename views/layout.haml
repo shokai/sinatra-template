@@ -1,0 +1,20 @@
+!!! XHTML
+%html
+  %head
+    %title
+      != yield_content :title
+    %link{:rel => 'stylesheet', :href => "#{app_root}/css/main.css", :type => 'text/css'}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    != yield_content :head
+  %body
+    %div#content
+      %div#header
+        %h1
+          != yield_content :title
+      %div#main
+        != yield
+      %hr
+      %div#footer
+        source code : 
+        - src_url = 'https://github.com/shokai/sinatra-template'
+        %a{:href => src_url} #{src_url}
