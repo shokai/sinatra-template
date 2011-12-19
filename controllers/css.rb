@@ -1,4 +1,4 @@
 
-get '/css/main.css' do
-  scss :main
+get '/:source.css' do
+  scss params[:source].to_sym
 end
