@@ -1,6 +1,13 @@
 Sinatra Template (Omikuji)
 ==========================
-Sinatra+Haml+jQuery App Template.
+Web App Template.
+
+* Ruby 1.8.7+
+* Sinatra 1.3+
+* Haml
+* sass(scss)
+* coffee-script
+* jQuery
 
 
 Clone
@@ -13,12 +20,7 @@ Clone
 Install Dependencies
 --------------------
 
-    % gem install sinatra thin sinatra-reloader json haml bundler
-
-
-or
-
-
+    % brew install coffee-script
     % gem install bundler
     % bundle install
     
