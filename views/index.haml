@@ -12,3 +12,15 @@
 %div
   %h2 result
   %ul#results
+  %h2 log
+  %div
+    %ul
+      %li これまでに#{@count}回おみくじが引かれました
+      %li 最後に引いたのは#{@last}です
+      %li 大吉は#{@count_daikichi}回でました
+      %li 小吉以上は#{@count_kichi}回でました
+      %li
+        最近の結果です
+        %ul
+          - @latests.each do |o|
+            %li= "#{o.result} - #{o.time}"

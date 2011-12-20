@@ -1,1 +1,6 @@
 title : 'Sinatra Template'
+
+mongo : 
+  host: localhost
+  port: 27017
+  database: sinatra-template

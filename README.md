@@ -8,6 +8,7 @@ Web App Template.
 * sass(scss)
 * coffee-script
 * jQuery
+* MongoDB2.0+ / Mongoid2.3+
 
 
 Clone
@@ -20,6 +21,7 @@ Clone
 Install Dependencies
 --------------------
 
+    % brew install mongodb
     % brew install coffee-script
     % gem install bundler
     % bundle install
