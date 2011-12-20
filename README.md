@@ -17,6 +17,14 @@ Clone
     % cd sinatra-template
 
 
+Want to Use DB?
+---------------
+if you want to use MongoDB, checkout branch.
+
+    % git branch
+    % git checkout mongoid
+
+
 Install Dependencies
 --------------------
 
@@ -44,3 +52,4 @@ open [http://localhost:8080](http://localhost:8080)
 Deploy
 ------
 use Passenger with "config.ru"
+
