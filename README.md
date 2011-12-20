@@ -21,8 +21,9 @@ Want to Use DB?
 ---------------
 if you want to use MongoDB, checkout branch.
 
-    % git branch
+    % git branch mongoid
     % git checkout mongoid
+    % git pull origin mongoid
 
 
 Install Dependencies
