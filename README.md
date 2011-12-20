@@ -23,7 +23,15 @@ Install Dependencies
     % brew install coffee-script
     % gem install bundler
     % bundle install
-    
+
+
+Config
+------
+
+    % cp sample.config.yaml config.yaml
+
+edit it.
+
 
 Run
 ---
