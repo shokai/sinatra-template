@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 get '/' do
   @count = Omikuji.all.count
-  @last = Omikuji.all.desc(:time).limit(1).first.time
-  @count_daikichi = Omikuji.where(:result => '大吉').count
-  @count_kichi = Omikuji.where(:result => /吉/).count
+  @last = Omikuji.all.desc(:time).limit(1).first
+  @daikichi = Omikuji.where(:result => '大吉')
+  @kichi = Omikuji.where(:result => /吉/)
   @latests = Omikuji.all.desc(:time).limit(5)
 
   @title = @@conf['title']
