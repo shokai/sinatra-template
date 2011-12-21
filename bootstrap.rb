@@ -7,7 +7,6 @@ require 'yaml'
 require 'json'
 require 'haml'
 require 'sass'
-require 'coffee-script'
 require 'mongoid'
 
 begin
