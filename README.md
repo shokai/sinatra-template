@@ -7,7 +7,7 @@ Web App Template.
 * Haml
 * sass(scss)
 * jQuery
-* MongoDB2.0+ / Mongoid2.3+
+* MongoDB2.0+ / Mongoid2.2.x
 
 
 Clone
