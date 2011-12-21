@@ -6,7 +6,6 @@ Web App Template.
 * Sinatra 1.3+
 * Haml
 * sass(scss)
-* coffee-script
 * jQuery
 
 
@@ -29,7 +28,6 @@ if you want to use MongoDB, checkout branch.
 Install Dependencies
 --------------------
 
-    % brew install coffee-script
     % gem install bundler
     % bundle install
 

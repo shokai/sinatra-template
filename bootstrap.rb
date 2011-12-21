@@ -7,7 +7,6 @@ require 'yaml'
 require 'json'
 require 'haml'
 require 'sass'
-require 'coffee-script'
 
 begin
   @@conf = YAML::load open(File.dirname(__FILE__)+'/config.yaml').read
