@@ -10,4 +10,5 @@ gem 'haml'
 gem 'sass'
 gem 'coffee-script'
 gem 'bson_ext'
-gem 'mongoid','>=2.3'
+gem 'mongoid','>=2.2','<2.3'
+
