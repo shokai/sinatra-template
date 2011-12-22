@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+before '/*.json' do
+  content_type 'application/json'
+end
+
 get '/' do
   @count = Omikuji.all.count
   @last = Omikuji.all.desc(:time).limit(1).first
@@ -11,7 +15,6 @@ get '/' do
 end
 
 get '/omikuji.json' do
-  content_type = 'application/json'
   arr = ['大吉', '中吉', '小吉', 'マジキチ', '凶']
 
   o = Omikuji.new(:result => arr.choice)
