@@ -1,6 +1,7 @@
 !!! XHTML
 %html
   %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html', :charset => 'UTF-8'}
     %title
       != yield_content :title
     %link{:rel => 'stylesheet', :href => "#{app_root}/main.css", :type => 'text/css'}
