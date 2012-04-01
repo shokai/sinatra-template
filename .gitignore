@@ -1,5 +1,6 @@
 *.lock
 *.tmp
 ~*
+*#*
 .sass-cache
 config.yaml
