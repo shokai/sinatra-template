@@ -17,19 +17,6 @@ Clone
     % cd sinatra-template
 
 
-Want to Use DB?
----------------
-if you want to use MongoDB or MySQL, checkout branch.
-
-    % git branch mongoid
-    % git checkout mongoid
-    % git pull origin mongoid
-
-    % git branch dm-mysql
-    % git checkout dm-mysql
-    % git pull origin dm-mysql
-
-
 Install Dependencies
 --------------------
 
