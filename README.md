@@ -7,7 +7,7 @@ Web App Template.
 * Haml
 * sass(scss)
 * jQuery
-* MongoDB2.0+ / Mongoid2.2.x
+* MySQL5.1+ / DataMapper1.2+
 
 
 Clone
@@ -33,7 +33,6 @@ if you want to use MongoDB or MySQL, checkout branch.
 Install Dependencies
 --------------------
 
-    % brew install mongodb
     % gem install bundler
     % bundle install
 
