@@ -17,7 +17,7 @@
     %ul
       %li これまでに#{@count}回おみくじが引かれました
       - if @last
-        %li 最後に引いたのは#{@last.time}です
+        %li 最後に引いたのは#{@last.time}で、結果は#{@last.result}でした。
       %li 大吉は#{@daikichi.count}回でました
       %li 小吉中吉大吉、合わせて#{@kichi.count}回でました
       - if @latest
