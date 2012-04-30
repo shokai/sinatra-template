@@ -33,7 +33,6 @@ if you want to use MongoDB or MySQL, checkout branch.
 Install Dependencies
 --------------------
 
-    % brew install mongodb
     % gem install bundler
     % bundle install
 
