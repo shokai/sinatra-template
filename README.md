@@ -17,19 +17,6 @@ Clone
     % cd sinatra-template
 
 
-Want to Use DB?
----------------
-if you want to use MongoDB or MySQL, checkout branch.
-
-    % git branch mongoid
-    % git checkout mongoid
-    % git pull origin mongoid
-
-    % git branch dm-mysql
-    % git checkout dm-mysql
-    % git pull origin dm-mysql
-
-
 Install Dependencies
 --------------------
 
@@ -43,6 +30,14 @@ Config
     % cp sample.config.yaml config.yaml
 
 edit it.
+
+
+Setup Database
+--------------
+
+    % mysql -u your_name -p
+    mysql> create database sinatra_template
+    % ruby bin/migrate.rb
 
 
 Run
