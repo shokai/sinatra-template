@@ -4,11 +4,11 @@ before '/*.json' do
 end
 
 get '/' do
-  @count = Omikuji.all.count
-  @last = Omikuji.all.desc(:time).limit(1).first
-  @daikichi = Omikuji.where(:result => '大吉')
-  @kichi = Omikuji.where(:result => /吉/)
-  @latests = Omikuji.all.desc(:time).limit(5)
+  @count = Omikuji.count
+  @last = Omikuji.last
+  @daikichi = Omikuji.find_by_result('大吉')
+  @kichi = Omikuji.find_by_result(/吉/)
+  @latests = Omikuji.latests(5)
 
   @title = @@conf['title']
   haml :index
