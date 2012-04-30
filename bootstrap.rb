@@ -7,7 +7,7 @@ require 'yaml'
 require 'json'
 require 'haml'
 require 'sass'
-require 'mongoid'
+require 'data_mapper'
 
 begin
   @@conf = YAML::load open(File.dirname(__FILE__)+'/config.yaml').read
@@ -18,11 +18,7 @@ rescue => e
   exit 1
 end
 
-Mongoid.configure do |conf|
-  host = @@conf['mongo']['host']
-  port = @@conf['mongo']['port']
-  conf.master = Mongo::Connection.new.db(@@conf['mongo']['database'])
-end
+DataMapper.setup(:default, @@conf['db'])
 
 [:helpers, :models ,:controllers].each do |dir|
   Dir.glob(File.dirname(__FILE__)+"/#{dir}/*.rb").each do |rb|
@@ -30,6 +26,9 @@ end
     require rb
   end
 end
+
+DataMapper::Logger.new($stdout, :debug)
+DataMapper.finalize
 
 set :haml, :escape_html => true
 

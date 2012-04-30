@@ -1,6 +1,8 @@
 title : 'Sinatra Template'
 
-mongo : 
+db :
+  adapter: mysql
   host: localhost
-  port: 27017
-  database: sinatra-template
+  database: sinatra_template
+  username: yourname
+  password: xxxxxxxx
