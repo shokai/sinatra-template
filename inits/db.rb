@@ -1,3 +1,3 @@
 require 'data_mapper'
 
-DataMapper.setup(:default, @@conf['db'])
+DataMapper.setup(:default, Conf['db'])
