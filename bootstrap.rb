@@ -9,7 +9,7 @@ require 'haml'
 require 'sass'
 
 [:inits, :helpers, :models ,:controllers].each do |dir|
-  Dir.glob(File.dirname(__FILE__)+"/#{dir}/*.rb").each do |rb|
+  Dir.glob(File.dirname(__FILE__)+"/#{dir}/*.rb").sort.each do |rb|
     puts "loading #{rb}"
     require rb
   end
