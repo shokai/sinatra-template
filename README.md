@@ -27,7 +27,7 @@ Install Dependencies
 Config
 ------
 
-    % cp sample.config.yaml config.yaml
+    % cp sample.config.yml config.yml
 
 edit it.
 

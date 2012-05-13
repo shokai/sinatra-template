@@ -9,8 +9,7 @@ get '/' do
   @daikichi = Omikuji.find_by_result('大吉')
   @kichi = Omikuji.find_by_result(/吉/)
   @latests = Omikuji.latests(5)
-
-  @title = @@conf['title']
+  @title = Conf['title']
   haml :index
 end
 
