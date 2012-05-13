@@ -4,7 +4,7 @@ before '/*.json' do
 end
 
 get '/' do
-  @title = @@conf['title']
+  @title = Conf['title']
   haml :index
 end
 
