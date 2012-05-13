@@ -6,7 +6,7 @@ class Conf
   end
 
   def self.conf_file
-    File.dirname(__FILE__)+'/../config.yaml'
+    File.dirname(__FILE__)+'/../config.yml'
   end
 
   def self.conf
@@ -14,7 +14,7 @@ class Conf
       @@conf ||= YAML::load self.open_conf_file.read
     rescue => e
       STDERR.puts e
-      STDERR.puts "config.yaml load error!!"
+      STDERR.puts "config.yml load error!!"
       exit 1
     end
   end
