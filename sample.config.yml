@@ -4,3 +4,11 @@ mongo :
   host: localhost
   port: 27017
   database: sinatra-template
+
+omikuji :
+  - '大吉'
+  - '中吉'
+  - '小吉'
+  - 'マジキチ'
+  - '凶'
+

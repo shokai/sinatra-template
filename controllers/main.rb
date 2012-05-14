@@ -14,9 +14,7 @@ get '/' do
 end
 
 get '/omikuji.json' do
-  arr = ['大吉', '中吉', '小吉', 'マジキチ', '凶']
-
-  o = Omikuji.new(:result => arr.choice)
+  o = Omikuji.new(:result => Conf['omikuji'].choice)
   o.save!
   
   @mes = {
