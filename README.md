@@ -37,7 +37,7 @@ Setup Database
 
     % mysql -u your_name -p
     mysql> create database sinatra_template
-    % ruby bin/migrate.rb
+    % ruby bin/db_migrate.rb
 
 
 Run
