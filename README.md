@@ -30,7 +30,7 @@ if you want to use MongoDB or MySQL, checkout branch.
 Install Dependencies
 --------------------
 
-    % gem install bundler
+    % gem install bundler foreman
     % bundle install --path .bundle
 
 
