@@ -45,7 +45,7 @@ edit it.
 Run
 ---
 
-    % ruby development.ru
+    % foreman start
 
 open [http://localhost:8080](http://localhost:8080)
 
