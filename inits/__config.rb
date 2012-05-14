@@ -1,8 +1,12 @@
 require 'yaml'
 
 class Conf
-  def self.[](name)
-    conf[name]
+  def self.[](key)
+    conf[key]
+  end
+
+  def self.[]=(key,value)
+    conf[key] = value
   end
 
   def self.conf_file
