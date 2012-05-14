@@ -52,3 +52,8 @@ Deploy
 ------
 use Passenger with "config.ru"
 
+
+Console
+-------
+
+    % ruby -Ku bin/console
