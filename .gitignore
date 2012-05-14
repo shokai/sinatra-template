@@ -3,4 +3,5 @@
 ~*
 *#*
 .sass-cache
+.bundle
 config.yml
