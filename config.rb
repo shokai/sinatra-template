@@ -10,7 +10,7 @@ class Conf
   end
 
   def self.conf_file
-    File.dirname(__FILE__)+'/../config.yml'
+    File.dirname(__FILE__)+'/config.yml'
   end
 
   def self.conf
@@ -30,4 +30,18 @@ class Conf
       return open(self.conf_file, opt)
     end
   end
+
+  def self.default
+    []
+  end
+
+  def self.init(*inits)
+    [default, inits].flatten.uniq.each do |cat|
+      Dir.glob("#{File.dirname(__FILE__)}/#{cat}/*.rb").each do |rb|
+        puts "load #{rb}"
+        require rb
+      end
+    end
+  end
+
 end
