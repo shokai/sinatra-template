@@ -7,13 +7,8 @@ require 'yaml'
 require 'json'
 require 'haml'
 require 'sass'
-
-[:inits, :helpers, :models ,:controllers].each do |dir|
-  Dir.glob(File.dirname(__FILE__)+"/#{dir}/*.rb").sort.each do |rb|
-    puts "loading #{rb}"
-    require rb
-  end
-end
+require File.dirname(__FILE__)+'/config'
+Conf.init :helpers, :controllers
 
 DataMapper::Logger.new($stdout, :debug)
 DataMapper.finalize
