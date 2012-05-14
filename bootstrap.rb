@@ -8,7 +8,7 @@ require 'json'
 require 'haml'
 require 'sass'
 require File.dirname(__FILE__)+'/config'
-Conf.init :helpers, :controllers
+Conf.init :inits, :models, :helpers, :controllers
 
 DataMapper::Logger.new($stdout, :debug)
 DataMapper.finalize

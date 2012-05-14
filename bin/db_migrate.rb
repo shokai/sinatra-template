@@ -2,12 +2,13 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'dm-migrations'
+require File.dirname(__FILE__)+'/../config'
+Conf.init :inits, :models
 
-[:inits, :models].each do |dir|
-  Dir.glob(File.dirname(__FILE__)+"/../#{dir}/*.rb").each do |rb|
-    puts "loading #{rb}"
-    require rb
-  end
-end
+puts 'initialize DB?'
+puts '[y/N]'
+exit unless STDIN.gets =~ /y/i
 
 DataMapper.auto_migrate!
+
+puts 'DB migrate success!!'

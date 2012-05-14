@@ -2,12 +2,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'dm-migrations'
-
-[:inits, :models].each do |dir|
-  Dir.glob(File.dirname(__FILE__)+"/../#{dir}/*.rb").each do |rb|
-    puts "loading #{rb}"
-    require rb
-  end
-end
+require File.dirname(__FILE__)+'/../config'
+Conf.init :inits, :models
 
 DataMapper.auto_upgrade!
