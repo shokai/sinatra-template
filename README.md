@@ -33,7 +33,7 @@ Install Dependencies
 --------------------
 
     % gem install bundler
-    % bundle install
+    % bundle install --path .bundle
 
 
 Config
