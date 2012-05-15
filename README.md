@@ -20,7 +20,7 @@ Clone
 Install Dependencies
 --------------------
 
-    % gem install bundler
+    % gem install bundler foreman
     % bundle install --path .bundle
 
 
@@ -35,7 +35,7 @@ edit it.
 Run
 ---
 
-    % ruby development.ru
+    % foreman start
 
 open [http://localhost:8080](http://localhost:8080)
 
