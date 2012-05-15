@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'foreman'
 gem 'rack'
 gem 'sinatra'
 gem 'thin'

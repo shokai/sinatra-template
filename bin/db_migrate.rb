@@ -2,8 +2,8 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'dm-migrations'
-require File.dirname(__FILE__)+'/../config'
-Conf.init :inits, :models
+require File.dirname(__FILE__)+'/../bootstrap'
+Bootstrap.init :inits, :models
 
 puts 'initialize DB?'
 puts '[y/N]'
