@@ -49,3 +49,4 @@ Console
 -------
 
     % ruby -Ku bin/console
+    > Omikuji.find_by_result(/吉/).count  ## => 24
