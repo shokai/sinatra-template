@@ -48,5 +48,5 @@ use Passenger with "config.ru"
 Console
 -------
 
-    % ruby -Ku bin/console
+    % ruby -Ku bin/console.rb
     > Omikuji.find_by_result(/吉/).count  ## => 24
