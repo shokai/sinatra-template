@@ -15,6 +15,8 @@ Clone
 
     % git clone git://github.com/shokai/sinatra-template.git
     % cd sinatra-template
+    % git checkout -b dm-mysql
+    % git pull origin dm-mysql
 
 
 Install Dependencies
