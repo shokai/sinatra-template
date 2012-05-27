@@ -15,8 +15,8 @@ Clone
 
     % git clone git://github.com/shokai/sinatra-template.git
     % cd sinatra-template
-    % git checkout -b mongoid
-    % git pull origin mongoid
+    % git branch -a
+    % git checkout -b mongoid remotes/origin/mongoid
 
 
 Install Dependencies
