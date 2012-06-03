@@ -1,5 +1,3 @@
-require 'yaml'
-
 class Bootstrap
   def self.default
     []
