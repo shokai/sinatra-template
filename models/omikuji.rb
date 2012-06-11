@@ -2,7 +2,7 @@
 class Omikuji
   include DataMapper::Resource
   property :id, Serial
-  property :time, Time , :default => lambda{Time.now}
+  property :time, Time, :default => lambda{|r,p| Time.now }
   property :result, String, :default => ''
 
   def self.last
