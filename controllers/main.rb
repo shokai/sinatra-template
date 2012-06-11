@@ -9,7 +9,7 @@ end
 
 get '/omikuji.json' do
   @mes = {
-    :result => Conf['omikuji'].choice,
+    :result => Conf['omikuji'].sample,
     :time => Time.now.to_s
   }.to_json
 end
