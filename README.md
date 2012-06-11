@@ -47,7 +47,7 @@ Run
 
     % foreman start
 
-open [http://localhost:8080](http://localhost:8080)
+open http://localhost:5000
 
 
 Deploy
