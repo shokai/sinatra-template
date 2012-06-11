@@ -9,6 +9,14 @@ Web App Template.
 * jQuery
 
 
+Want to Use DB?
+---------------
+if you want to use MongoDB or MySQL, checkout branch.
+
+* https://github.com/shokai/sinatra-template/tree/mongoid
+* https://github.com/shokai/sinatra-template/tree/dm-mysql
+
+
 Clone
 -----
 
@@ -16,22 +24,11 @@ Clone
     % cd sinatra-template
 
 
-Want to Use DB?
----------------
-if you want to use MongoDB or MySQL, checkout branch.
-
-    % git checkout mongoid
-    % git pull origin mongoid
-
-    % git checkout dm-mysql
-    % git pull origin dm-mysql
-
-
 Install Dependencies
 --------------------
 
     % gem install bundler foreman
-    % bundle install --path .bundle
+    % bundle install --path vendor/bundle
 
 
 Config
