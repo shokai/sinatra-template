@@ -23,7 +23,7 @@ Install Dependencies
 --------------------
 
     % gem install bundler foreman
-    % bundle install --path .bundle
+    % bundle install --path vendor/bundle
 
 
 Config
