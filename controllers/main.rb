@@ -14,7 +14,7 @@ get '/' do
 end
 
 get '/omikuji.json' do
-  o = Omikuji.new(:result => Conf['omikuji'].choice)
+  o = Omikuji.new(:result => Conf['omikuji'].sample)
   o.save!
   @mes = {
     :result => o.result,
