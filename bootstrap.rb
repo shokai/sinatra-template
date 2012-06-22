@@ -1,3 +1,5 @@
+require 'yaml'
+
 class Bootstrap
   def self.default
     []
@@ -42,5 +44,9 @@ class Conf
     else
       return open(self.conf_file, opt)
     end
+  end
+
+  def self.to_yaml
+    self.conf.to_yaml
   end
 end
