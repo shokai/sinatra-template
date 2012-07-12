@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'irb'
-require File.dirname(__FILE__)+'/../bootstrap'
+require File.expand_path '../bootstrap', File.dirname(__FILE__)
 Bootstrap.init :inits, :models
 
 IRB.start
