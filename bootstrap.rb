@@ -17,7 +17,7 @@ end
 
 class Conf
   def self.[](key)
-    conf[key]
+    ENV[key] || conf[key]
   end
 
   def self.[]=(key,value)
