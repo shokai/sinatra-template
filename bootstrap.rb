@@ -24,13 +24,17 @@ class Conf
     conf[key] = value
   end
 
-  def self.conf_file
-    File.dirname(__FILE__)+'/config.yml'
+  def self.file
+    @@file ||= File.dirname(__FILE__)+'/config.yml'
+  end
+
+  def self.file=(name)
+    @@file = name
   end
 
   def self.conf
     begin
-      @@conf ||= YAML::load self.open_conf_file.read
+      @@conf ||= YAML::load self.open.read
     rescue => e
       STDERR.puts e
       STDERR.puts "config.yml load error!!"
@@ -38,15 +42,25 @@ class Conf
     end
   end
 
-  def self.open_conf_file(opt=nil, &block)
+  def self.open(opt=nil, &block)
     if block_given?
-      yield open(self.conf_file, opt)
+      yield File.open(self.file, opt)
     else
-      return open(self.conf_file, opt)
+      return File.open(self.file, opt)
+    end
+  end
+
+  def self.save
+    self.open 'w+' do |f|
+      f.write self.to_yaml
     end
   end
 
   def self.to_yaml
     self.conf.to_yaml
+  end
+
+  def self.to_json
+    self.conf.to_json
   end
 end
