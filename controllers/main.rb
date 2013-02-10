@@ -3,6 +3,10 @@ before '/*.json' do
   content_type 'application/json'
 end
 
+before '/*' do
+    @title = Conf['title']
+end
+
 get '/' do
   @count = Omikuji.count
   @last = Omikuji.last
