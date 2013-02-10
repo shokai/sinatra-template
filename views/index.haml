@@ -1,28 +1,33 @@
 - content_for :title do
   = @title
 
-- content_for :head do
+- content_for :html_head do
   :javascript
     var app_root = "#{app_root}";
-    var omikuji_api = app_root+'/omikuji.json';
-  %script{:type => 'text/javascript', :src => "#{app_root}/js/main.js"}
+    var omikuji_api = "#{app_root}/omikuji.json";
 
-%div
-  %input{:id => 'start_btn', :type => 'button', :value => 'start'}
-%div
-  %h2 result
-  %ul#results
-  %h2 log
+- content_for :html_foot do
+  %script{:src => "#{app_root}/js/main.js"}
+
+%div#header
+  %h1= @title
+%div#main
   %div
-    %ul
-      %li これまでに#{@count}回おみくじが引かれました
-      - if @last
-        %li 最後に引いたのは#{@last.time}で、結果は#{@last.result}でした。
-      %li 大吉は#{@daikichi.count}回でました
-      %li 小吉中吉大吉、合わせて#{@kichi.count}回でました
-      - if @latest
-        %li
-          最近の結果です
-          %ul
-            - @latests.each do |o|
-              %li= "#{o.result} - #{o.time}"
+    %input{:id => 'start_btn', :type => 'button', :value => 'start'}
+  %div
+    %h2 result
+    %ul#results
+    %h2 log
+    %div
+      %ul
+        %li これまでに#{@count}回おみくじが引かれました
+        - if @last
+          %li 最後に引いたのは#{@last.time}で、結果は#{@last.result}でした。
+        %li 大吉は#{@daikichi.count}回でました
+        %li 小吉中吉大吉、合わせて#{@kichi.count}回でました
+        - if @latest
+          %li
+            最近の結果です
+            %ul
+              - @latests.each do |o|
+                %li= "#{o.result} - #{o.time}"
